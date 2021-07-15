@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import background from './background.jpg';
 
 import './weather.style.scss';
 
