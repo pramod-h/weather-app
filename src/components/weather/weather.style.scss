@@ -1,0 +1,55 @@
+body{
+    background: rgb(58,163,241);
+    background: linear-gradient(180deg, rgba(58,163,241,1) 33%, rgba(66,197,255,1) 65%);
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.weather {
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    max-width: 50rem;
+    height: 20rem;
+    
+    margin: auto;
+    &-card {
+        background-image: url("./background.jpg");
+        background-size: 80%;
+        background-attachment: fixed;
+        height: 20rem;
+        padding: 1rem;
+    }
+    & .first-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        font-weight: 600;
+        color: white;
+        &-temp {
+            font-size: 40px;
+            margin: 0;
+        }
+        &-name {
+            color: white;
+            text-align: center;
+            margin: 0;
+            font-weight: 600;
+        }
+    }
+    & .bottom-bar {
+        background-color: white;
+        border-radius: 0 0 8px 8px;
+        display: flex;
+        & p {
+            margin: 0;
+            width: 139px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 540;
+            text-align: center;
+            border-right: 0.5px solid rgb(235, 235, 235);
+        }
+    }
+}
