@@ -6,6 +6,9 @@ class WeatherCard extends Component {
 
     constructor(props){
         super(props)
+        this.state = {
+            date: new Date().toDateString()
+        }
     }
 
     render() { 
@@ -16,13 +19,16 @@ class WeatherCard extends Component {
         return ( 
             <div className="weather">
                 <div className="weather-card">
-                    <p className="first-row-name">{name}, {country}</p>
+                    <p className="date">{this.state.date}</p>
                     <div className="first-row">
-                    <p className="first-row-temp">{parseInt(actual-273.15)}°</p>
+                        <div>
+                            <p className="first-row-temp">{parseInt(actual-273.15)}°</p>
+                            <span className="temp-details">{title}</span>
+                        </div>
+                        <p className="first-row-name">{name}, {country}</p>
                     </div>
-                  </div>
-               
-                  <div className="bottom-bar">
+                </div>
+                <div className="bottom-bar">
                   <div>
                       <p>Co-ords</p>
                       <p>{lon}, {lat}</p>
@@ -43,7 +49,7 @@ class WeatherCard extends Component {
                       <p>Wind</p>
                       <p>{speed}mph</p>
                   </div>
-                  </div>
+                </div>
             </div>
          );
     }

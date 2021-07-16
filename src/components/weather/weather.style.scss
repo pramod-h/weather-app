@@ -3,6 +3,7 @@ body{
     background: linear-gradient(180deg, rgba(58,163,241,1) 33%, rgba(66,197,255,1) 65%);
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
 }
 
 .weather {
@@ -10,29 +11,37 @@ body{
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     max-width: 50rem;
-    height: 20rem;
     margin: 5rem auto;
     &-card {
         background-image: url("./background.jpg");
-        background-size: 50%;
         background-attachment: fixed;
+        background-size: 38% 70%;
         height: 20rem;
-        padding: 1rem;
+        padding: 2rem;
+        & .date {
+            color:white;
+            font-weight: 600;
+            margin-top: 0;
+            text-align: center;
+        }
     }
     & .first-row{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+        grid-template-columns: 300px 1fr;
         font-weight: 600;
         color: white;
+        text-shadow: 0 0 5px rgb(66, 66, 66);
         &-temp {
             font-size: 50px;
-            text-shadow: 0 0 10px gray;
             margin: 0;
+            & .temp-details {
+                font-size: 1rem;
+                margin-left: 20px;
+            }
         }
         &-name {
             color: white;
-            text-align: center;
+            text-align: left;
             margin: 0;
             font-size: 22px;
             font-weight: 600;
