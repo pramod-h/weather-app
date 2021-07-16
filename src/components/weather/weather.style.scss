@@ -9,11 +9,9 @@ body{
     background: rgba( 255, 255, 255, 0.3 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
     max-width: 50rem;
     height: 20rem;
-    
-    margin: auto;
+    margin: 5rem auto;
     &-card {
         background-image: url("./background.jpg");
         background-size: 50%;
@@ -28,13 +26,15 @@ body{
         font-weight: 600;
         color: white;
         &-temp {
-            font-size: 40px;
+            font-size: 50px;
+            text-shadow: 0 0 10px gray;
             margin: 0;
         }
         &-name {
             color: white;
             text-align: center;
             margin: 0;
+            font-size: 22px;
             font-weight: 600;
         }
     }
