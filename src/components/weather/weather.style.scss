@@ -1,44 +1,77 @@
-body{
-    background: rgb(58,163,241);
-    background: linear-gradient(180deg, rgba(58,163,241,1) 33%, rgba(66,197,255,1) 65%);
+body {
+    background: rgb(58, 163, 241);
+    background: linear-gradient(180deg, rgba(58, 163, 241, 1) 33%, rgba(66, 197, 255, 1) 65%);
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
     overflow: hidden;
 }
 
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 50px;
+        height: 50px;
+        animation: rotating 2s linear infinite;
+        -webkit-animation: rotating 2s linear infinite;
+        filter: invert(1);
+
+    }
+}
+
 .weather {
-    background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
     max-width: 50rem;
     margin: 5rem auto;
+
     &-card {
         background-image: url("./background.jpg");
         background-attachment: fixed;
         background-size: 38% 70%;
         height: 20rem;
         padding: 2rem;
+
         & .date {
-            color:white;
+            color: white;
             font-weight: 600;
             margin-top: 0;
             text-align: center;
         }
     }
-    & .first-row{
+
+    & .first-row {
         display: grid;
         grid-template-columns: 300px 1fr;
         font-weight: 600;
         color: white;
         text-shadow: 0 0 5px rgb(66, 66, 66);
+
         &-temp {
             font-size: 50px;
             margin: 0;
+
             & .temp-details {
                 font-size: 1rem;
                 margin-left: 20px;
             }
         }
+
         &-name {
             color: white;
             text-align: left;
@@ -47,10 +80,12 @@ body{
             font-weight: 600;
         }
     }
+
     & .bottom-bar {
         background-color: white;
         border-radius: 0 0 8px 8px;
         display: flex;
+
         & p {
             margin: 0;
             width: 139px;
